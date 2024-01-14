@@ -38,11 +38,7 @@ declare_args() {
   enable_unittest = false
 }
 
-if(is_debug){
-  set_default_toolchain("//build/toolchains:clang_debug")
-}else{
-  set_default_toolchain("//build/toolchains:clang")
-}
+set_default_toolchain("//build/toolchains:clang")
 
 include_dirs = ["//"]
 cflags_cc = ["-std=c++14"]
